@@ -14,6 +14,11 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
   "dependencies": {
     "expo": "~37.0.3",
     "react": "~16.9.0",
@@ -23,8 +28,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "babel-preset-expo": "~8.1.0",
     "commitizen": "^4.1.2",
-    "cz-conventional-changelog": "3.2.0"
+    "cz-conventional-changelog": "3.2.0",
+    "husky": "^4.2.5"
   }
 }
